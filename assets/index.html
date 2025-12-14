@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Btbite | Gaming Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    color:white;
+    background:black;
+    overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:black;
+    padding:30px;
+    text-align:center;
+    border-bottom:4px solid red;
+}
+
+.logo{
+    font-family:'Orbitron', sans-serif;
+    font-size:55px;
+    color:red;
+    letter-spacing:5px;
+    animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon{
+    from{ text-shadow:0 0 10px red; }
+    to{ text-shadow:0 0 35px orange; }
+}
+
+nav a{
+    color:white;
+    margin:15px;
+    text-decoration:none;
+    font-size:18px;
+}
+nav a:hover{color:red;}
+
+/* ===== HERO ===== */
+.hero{
+    padding:80px 20px;
+    text-align:center;
+}
+.hero h1{
+    color:red;
+    font-size:42px;
+}
+.hero p{
+    font-size:20px;
+}
+
+/* ===== GAME LOGOS ===== */
+.games{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.game-logo{
+    width:120px;
+    animation: float 3s infinite ease-in-out;
+}
+.game-logo:hover{
+    transform:scale(1.2) rotate(10deg);
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+/* ===== SECTIONS ===== */
+section{
+    padding:80px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.card{
+    background:#0f0f0f;
+    border:2px solid red;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:40px;
+    transition:0.3s;
+}
+.card:hover{
+    box-shadow:0 0 30px red;
+    transform:translateY(-10px);
+}
+
+.btn{
+    margin-top:15px;
+    padding:15px;
+    width:100%;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+.btn:hover{background:darkred;}
+
+footer{
+    background:black;
+    padding:30px;
+    text-align:center;
+    border-top:4px solid red;
+}
+footer a{
+    color:red;
+    margin:10px;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🔥 Btbite 🔥</div>
+    <nav>
+        <a href="#robux">Robux</a>
+        <a href="#pes">PES</a>
+        <a href="#valo">Valorant</a>
+        <a href="#freefire">Free Fire</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>THE BEST IN THE WORLD 🌍🔥</h1>
+    <p>سرعة • ثقة • أثمنة نارية</p>
+
+    <div class="games">
+        <img class="game-logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Roblox_Logo_2022.svg">
+        <img class="game-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Free_Fire_logo.svg">
+        <img class="game-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Valorant_logo.svg">
+        <img class="game-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/EFootball_logo.svg">
+    </div>
+</div>
+
+<!-- ROBUX -->
+<section id="robux">
+<div class="card">
+<h2>🟥 Robux</h2>
+<button class="btn" onclick="order('100 Robux')">100 Robux</button>
+<button class="btn" onclick="order('400 Robux')">400 Robux</button>
+<button class="btn" onclick="order('800 Robux')">800 Robux</button>
+<button class="btn" onclick="order('1700 Robux')">1700 Robux</button>
+</div>
+</section>
+
+<!-- PES -->
+<section id="pes">
+<div class="card">
+<h2>⚽ PES Coins</h2>
+<button class="btn" onclick="order('100 PES Coins')">100 Coins</button>
+<button class="btn" onclick="order('550 PES Coins')">550 Coins</button>
+<button class="btn" onclick="order('1040 PES Coins')">1040 Coins</button>
+<button class="btn" onclick="order('2130 PES Coins')">2130 Coins</button>
+</div>
+</section>
+
+<!-- VALORANT -->
+<section id="valo">
+<div class="card">
+<h2>🔫 Valorant Points</h2>
+<button class="btn" onclick="order('475 VP')">475 VP</button>
+<button class="btn" onclick="order('1000 VP')">1000 VP</button>
+<button class="btn" onclick="order('2050 VP')">2050 VP</button>
+</div>
+</section>
+
+<!-- FREE FIRE -->
+<section id="freefire">
+<div class="card">
+<h2>🔥 Free Fire Diamonds</h2>
+<button class="btn" onclick="order('100 Diamonds')">100 💎</button>
+<button class="btn" onclick="order('500 Diamonds')">500 💎</button>
+<button class="btn" onclick="order('1000 Diamonds')">1000 💎</button>
+<button class="btn" onclick="order('2000 Diamonds')">2000 💎</button>
+</div>
+</section>
+
+<footer>
+<p>© 2025 - Btbite Gaming Store</p>
+<a href="https://www.instagram.com/ure_4ron?igsh=MXJnbjVnYnlpdG81Nw==">Instagram</a>
+<a href="https://wa.me/212612950568">WhatsApp</a>
+<a href="https://discord.com/users/27w8">Discord</a>
+</footer>
+
+<!-- YOUTUBE MUSIC -->
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/1ZYbU82GVz4?autoplay=1&loop=1&playlist=1ZYbU82GVz4"
+allow="autoplay">
+</iframe>
+
+<script>
+function order(type){
+window.open("https://wa.me/212612950568?text=طلب "+type,"_blank");
+}
+</script>
+
+</body>
+</html>
